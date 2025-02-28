@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +13,20 @@
             --light-color: #ecf0f1;
             --dark-color: #2c3e50;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -33,7 +34,7 @@
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         header {
             display: flex;
             justify-content: space-between;
@@ -42,30 +43,30 @@
             border-bottom: 3px solid var(--secondary-color);
             margin-bottom: 30px;
         }
-        
+
         .profile-header {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-        
 
-        
+
+
         .profile-info h1 {
             color: var(--primary-color);
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
-        
+
         .profile-info p {
             font-size: 1.1rem;
             color: #666;
         }
-        
+
         .contact-info {
             text-align: right;
         }
-        
+
         .contact-info p {
             margin: 5px 0;
             display: flex;
@@ -73,62 +74,68 @@
             justify-content: flex-end;
             gap: 10px;
         }
-        
+
         .overview {
             background-color: var(--light-color);
             padding: 20px;
             border-radius: 5px;
             margin-bottom: 30px;
         }
-        
+
         section {
             margin-bottom: 30px;
         }
-        
+
         h2 {
             color: var(--secondary-color);
             margin-bottom: 15px;
             padding-bottom: 10px;
             border-bottom: 2px solid var(--light-color);
         }
-        
-        .experience-item, .project-item, .education-item {
+
+        .experience-item,
+        .project-item,
+        .education-item {
             margin-bottom: 25px;
         }
-        
-        .experience-header, .project-header {
+
+        .experience-header,
+        .project-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
         }
-        
-        .experience-title, .project-title {
+
+        .experience-title,
+        .project-title {
             font-weight: bold;
             color: var(--primary-color);
             font-size: 1.2rem;
         }
-        
-        .experience-company, .project-type {
+
+        .experience-company,
+        .project-type {
             font-style: italic;
             color: var(--secondary-color);
         }
-        
-        .experience-date, .project-date {
+
+        .experience-date,
+        .project-date {
             color: #777;
         }
-        
+
         ul {
             padding-left: 20px;
             margin-top: 10px;
         }
-        
+
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 15px;
         }
-        
+
         .skill-tag {
             background-color: var(--secondary-color);
             color: white;
@@ -136,30 +143,30 @@
             border-radius: 20px;
             font-size: 0.9rem;
         }
-        
+
         .certifications {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-        
+
         .cert-item {
             background-color: var(--light-color);
             padding: 15px;
             border-radius: 5px;
             border-left: 4px solid var(--secondary-color);
         }
-        
+
         .cert-title {
             font-weight: bold;
             color: var(--primary-color);
         }
-        
+
         .cert-issuer {
             font-style: italic;
             color: #666;
         }
-        
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -167,27 +174,28 @@
             border-top: 1px solid var(--light-color);
             color: #777;
         }
-        
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .profile-header {
                 flex-direction: column;
             }
-            
+
             .contact-info {
                 text-align: center;
                 margin-top: 20px;
             }
-            
+
             .contact-info p {
                 justify-content: center;
             }
-            
-            .experience-header, .project-header {
+
+            .experience-header,
+            .project-header {
                 flex-direction: column;
             }
         }
@@ -221,6 +229,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -237,16 +246,20 @@
                 <p>🔗 <a href="https://www.linkedin.com/in/liubov-marchuk/" target="_blank">LinkedIn Profile</a></p>
             </div>
         </header>
-        
+
         <section class="overview">
-            <p>Project Manager and Research Coordinator with experience in managing educational, research, and international grant projects. Skilled in planning, stakeholder engagement, and data analysis, with a strong background in developing and overseeing cross-border research initiatives. Passionate about supporting impactful projects that drive scientific innovation, education, and social rehabilitation.</p>
+            <p>Project Manager and Research Coordinator with experience in managing educational, research, and
+                international grant projects. Skilled in planning, stakeholder engagement, and data analysis, with a
+                strong background in developing and overseeing cross-border research initiatives. Passionate about
+                supporting impactful projects that drive scientific innovation, education, and social rehabilitation.
+            </p>
         </section>
-        
+
 
 
         <section>
             <h2>Professional Experience</h2>
-            
+
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
@@ -256,11 +269,13 @@
                     <div class="experience-date">October 2024 – January 2025</div>
                 </div>
                 <ul>
-                    <li>Conducted research on control systems for shape memory alloys in collaboration with a French research institute.</li>
-                    <li>Coordinated scientific research activities, supporting international collaboration initiatives.</li>
+                    <li>Conducted research on control systems for shape memory alloys in collaboration with a French
+                        research institute.</li>
+                    <li>Coordinated scientific research activities, supporting international collaboration initiatives.
+                    </li>
                 </ul>
             </div>
-            
+
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
@@ -270,13 +285,16 @@
                     <div class="experience-date">October 2020 – October 2024</div>
                 </div>
                 <ul>
-                    <li>Developed and managed research projects and grant applications in collaboration with international partners.</li>
-                    <li>Led proposal writing and funding applications for educational and research-based initiatives.</li>
+                    <li>Developed and managed research projects and grant applications in collaboration with
+                        international partners.</li>
+                    <li>Led proposal writing and funding applications for educational and research-based initiatives.
+                    </li>
                     <li>Coordinated communication with universities, research institutions, and donors.</li>
-                    <li>Supervised the financial and logistical aspects of projects, ensuring compliance with international funding regulations.</li>
+                    <li>Supervised the financial and logistical aspects of projects, ensuring compliance with
+                        international funding regulations.</li>
                 </ul>
             </div>
-            
+
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
@@ -286,11 +304,12 @@
                     <div class="experience-date">October 2023 – December 2023</div>
                 </div>
                 <ul>
-                    <li>Managed administrative and coordination tasks related to an international research collaboration on soft robotics.</li>
+                    <li>Managed administrative and coordination tasks related to an international research collaboration
+                        on soft robotics.</li>
                     <li>Conducted research, prepared documentation, and contributed to joint project proposals.</li>
                 </ul>
             </div>
-            
+
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
@@ -301,94 +320,106 @@
                 </div>
                 <ul>
                     <li>Conducted research on mechanical directed-action percussion devices and their applications.</li>
-                    <li>Worked within an international research environment, collaborating with experts in engineering.</li>
+                    <li>Worked within an international research environment, collaborating with experts in engineering.
+                    </li>
                 </ul>
             </div>
         </section>
-        
+
         <section>
             <h2>Key Projects</h2>
-            
+
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">ProdRob: Mine Detection System</div>
                 </div>
                 <ul>
-                    <li>Developed and coordinated a joint research project between Ukrainian and German universities for humanitarian demining solutions.</li>
-                    <li>Designed the proposal strategy, outlining funding needs, project scope, and stakeholder engagement.</li>
+                    <li>Developed and coordinated a joint research project between Ukrainian and German universities for
+                        humanitarian demining solutions.</li>
+                    <li>Designed the proposal strategy, outlining funding needs, project scope, and stakeholder
+                        engagement.</li>
                     <li>Focused on integrating sensor-based monitoring for improved mine detection accuracy.</li>
                     <li>Contributed to financial planning and compliance reporting for funding applications.</li>
                 </ul>
             </div>
-            
+
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Umbrella: Critical Infrastructure Protection</div>
                 </div>
                 <ul>
-                    <li>Led the proposal development for an international research project involving Ukraine, Czech Republic, Poland, and Canada.</li>
-                    <li>Designed methodologies for risk simulation and forecasting, supporting the protection of critical energy infrastructure.</li>
-                    <li>Integrated virtual and augmented reality technologies for enhanced decision-making and threat scenario testing.</li>
+                    <li>Led the proposal development for an international research project involving Ukraine, Czech
+                        Republic, Poland, and Canada.</li>
+                    <li>Designed methodologies for risk simulation and forecasting, supporting the protection of
+                        critical energy infrastructure.</li>
+                    <li>Integrated virtual and augmented reality technologies for enhanced decision-making and threat
+                        scenario testing.</li>
                     <li>Managed cross-border collaboration, ensuring technical alignment and resource allocation.</li>
                 </ul>
             </div>
-            
+
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">TETEED: Energy Transition Training Program</div>
                 </div>
                 <ul>
-                    <li>Developed a collaborative training program in partnership with Lund University and Ukrainian technical universities.</li>
-                    <li>Focused on entrepreneurial and technological solutions for sustainable energy transition in Ukraine.</li>
-                    <li>Designed program modules on renewable energy business models, policy frameworks, and technology commercialization.</li>
+                    <li>Developed a collaborative training program in partnership with Lund University and Ukrainian
+                        technical universities.</li>
+                    <li>Focused on entrepreneurial and technological solutions for sustainable energy transition in
+                        Ukraine.</li>
+                    <li>Designed program modules on renewable energy business models, policy frameworks, and technology
+                        commercialization.</li>
                 </ul>
             </div>
         </section>
-        
+
         <section>
             <h2>Education</h2>
-            
+
             <div class="education-item">
                 <div class="experience-header">
                     <div>
                         <div class="experience-title">PhD in Engineering</div>
-                        <div class="experience-company">National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute"</div>
+                        <div class="experience-company">National Technical University of Ukraine "Igor Sikorsky Kyiv
+                            Polytechnic Institute"</div>
                     </div>
                     <div class="experience-date">October 2024</div>
                 </div>
             </div>
-            
+
             <div class="education-item">
                 <div class="experience-header">
                     <div>
-                        <div class="experience-title">Master's Degree in Power Engineering, Electrical Engineering, and Electromechanics</div>
-                        <div class="experience-company">National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute"</div>
+                        <div class="experience-title">Master's Degree in Power Engineering, Electrical Engineering, and
+                            Electromechanics</div>
+                        <div class="experience-company">National Technical University of Ukraine "Igor Sikorsky Kyiv
+                            Polytechnic Institute"</div>
                     </div>
                     <div class="experience-date">2018 – 2019</div>
                 </div>
             </div>
         </section>
-        
+
         <section>
             <h2>Certifications</h2>
-            
+
             <div class="certifications">
                 <div class="cert-item">
                     <div class="cert-title">Google Project Management Professional Certificate</div>
                     <div class="cert-issuer">Coursera</div>
                     <p>Project Initiation, Planning, Execution, and Stakeholder Management</p>
                 </div>
-                
+
                 <div class="cert-item">
                     <div class="cert-title">Google Data Analytics Specialization</div>
                     <div class="cert-issuer">Coursera</div>
                 </div>
             </div>
         </section>
-        
+
         <section>
             <h2>Skills</h2>
-            
+
             <div class="skills">
                 <div class="skill-tag">Project Management</div>
                 <div class="skill-tag">Research Coordination</div>
@@ -402,147 +433,203 @@
                 <div class="skill-tag">Cross-border Projects</div>
             </div>
         </section>
-        
 
-        
+
+
         <footer>
             <p>© 2025 Liubov Marchuk | Last Updated: February 2025</p>
         </footer>
 
         <style>
-            /* Print Styles for Liubov Marchuk CV */
-@media print {
-    /* General print settings */
-    @page {
-        size: A4;
-        margin: 1cm;
-    }
-    
-    body {
-        background-color: white !important;
-        color: black !important;
-        font-size: 12pt;
-        line-height: 1.5;
-    }
-    
-    .container {
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: none !important;
-    }
-    
-    /* Improve header for printing */
-    header {
-        break-inside: avoid;
-        padding: 10px 0 !important;
-    }
-    
-    /* Adjust text colors for better printing */
-    h1, h2, .experience-title, .project-title, .cert-title {
-        color: black !important;
-    }
-    
-    h2 {
-        font-size: 16pt;
-        margin-top: 20px;
-        border-bottom: 1px solid #999 !important;
-    }
-    
-    /* Ensure section breaks are clean */
-    section {
-        break-inside: avoid-page;
-        page-break-inside: avoid;
-        margin-bottom: 15px !important;
-    }
-    
-    /* Avoid breaking inside experience items */
-    .experience-item, .project-item, .education-item, .cert-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        margin-bottom: 15px !important;
-    }
-    
-    /* Format skill tags for print */
-    .skills {
-        break-before: avoid;
-        break-after: avoid;
-        break-inside: avoid;
-    }
-    
-    .skill-tag {
-        background-color: white !important;
-        color: black !important;
-        border: 1px solid #999;
-        padding: 3px 10px !important;
-    }
-    
-    /* Remove background colors and use borders instead */
-    .overview, .cert-item, .defense-tech-section {
-        background-color: white !important;
-        border: 1px solid #ccc !important;
-        padding: 10px !important;
-    }
-    
-    /* Remove colored left borders and replace with simple borders */
-    .cert-item, .defense-tech-section {
-        border-left: 1px solid #999 !important;
-    }
-    
-    /* Hide QR code section when printing */
-    .qr-section {
-        display: none !important;
-    }
-    
-    /* Improve links for print */
-    a {
-        text-decoration: none;
-        color: black !important;
-    }
-    
-    a[href]:after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-        color: #666;
-    }
-    
-    /* Hide footer on print */
-    footer {
-        display: none !important;
-    }
-    
-    /* Adjust contact info for print */
-    .contact-info p {
-        margin: 2px 0 !important;
-    }
-    
-    /* Adjust list spacing */
-    ul {
-        margin-top: 5px !important;
-        padding-left: 15px !important;
-    }
-    
-    li {
-        margin-bottom: 3px !important;
-    }
-    
-    /* Minimize margins between sections for compact printing */
-    .experience-header, .project-header {
-        margin-bottom: 5px !important;
-    }
-    
-    /* Reduce spacing for dates */
-    .experience-date, .project-date {
-        font-size: 10pt !important;
-    }
-    
-    /* Improve experience company/institution text */
-    .experience-company, .project-type {
-        font-style: italic !important;
-        color: #333 !important;
-    }
-}
+            
+            @media print {
+
+                
+                @page {
+                    size: A4;
+                    margin: 1cm;
+                }
+
+                body {
+                    background-color: white !important;
+                    color: black !important;
+                    font-size: 12pt;
+                    line-height: 1.5;
+                }
+
+                .container {
+                    max-width: 100% !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    box-shadow: none !important;
+                }
+
+                header {
+                    break-inside: avoid;
+                    padding: 10px 0 !important;
+                }
+
+                h1,
+                h2,
+                .experience-title,
+                .project-title,
+                .cert-title {
+                    color: black !important;
+                }
+
+                h2 {
+                    font-size: 16pt;
+                    margin-top: 20px;
+                    border-bottom: 1px solid #999 !important;
+                }
+
+                section {
+                    break-inside: avoid-page;
+                    page-break-inside: avoid;
+                    margin-bottom: 15px !important;
+                }
+
+                .experience-item,
+                .project-item,
+                .education-item,
+                .cert-item {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
+                    margin-bottom: 15px !important;
+                }
+
+                .skills {
+                    break-before: avoid;
+                    break-after: avoid;
+                    break-inside: avoid;
+                }
+
+                .skill-tag {
+                    background-color: white !important;
+                    color: black !important;
+                    border: 1px solid #999;
+                    padding: 3px 10px !important;
+                }
+
+                .overview,
+                .cert-item,
+                .defense-tech-section {
+                    background-color: white !important;
+                    border: 1px solid #ccc !important;
+                    padding: 10px !important;
+                }
+
+                .cert-item,
+                .defense-tech-section {
+                    border-left: 1px solid #999 !important;
+                }
+
+                .qr-section {
+                    display: none !important;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black !important;
+                }
+
+                a[href]:after {
+                    content: " (" attr(href) ")";
+                    font-size: 10pt;
+                    color: #666;
+                }
+
+                footer {
+                    display: none !important;
+                }
+
+                .contact-info p {
+                    margin: 2px 0 !important;
+                }
+
+                ul {
+                    margin-top: 5px !important;
+                    padding-left: 15px !important;
+                }
+
+                li {
+                    margin-bottom: 3px !important;
+                }
+
+                .experience-header,
+                .project-header {
+                    margin-bottom: 5px !important;
+                }
+
+                .experience-date,
+                .project-date {
+                    font-size: 10pt !important;
+                }
+
+                .experience-company,
+                .project-type {
+                    font-style: italic !important;
+                    color: #333 !important;
+                }
+            }
         </style>
     </div>
+
+    <div class="print-button-container">
+        <button id="downloadPDF" class="download-btn">
+            <span class="btn-icon">📄</span> Download PDF
+        </button>
+    </div>
+
+    <style>
+        .print-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 20px;
+        }
+
+        .download-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-icon {
+            font-size: 1.2em;
+        }
+
+        @media print {
+            .print-button-container {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <script>
+        document.getElementById('downloadPDF').addEventListener('click', () => {
+            const filename = 'Liubov_Marchuk_CV.pdf';
+
+            window.print();
+        });
+    </script>
 </body>
+
 </html>
