@@ -408,6 +408,141 @@
         <footer>
             <p>© 2025 Liubov Marchuk | Last Updated: February 2025</p>
         </footer>
+
+        <style>
+            /* Print Styles for Liubov Marchuk CV */
+@media print {
+    /* General print settings */
+    @page {
+        size: A4;
+        margin: 1cm;
+    }
+    
+    body {
+        background-color: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    /* Improve header for printing */
+    header {
+        break-inside: avoid;
+        padding: 10px 0 !important;
+    }
+    
+    /* Adjust text colors for better printing */
+    h1, h2, .experience-title, .project-title, .cert-title {
+        color: black !important;
+    }
+    
+    h2 {
+        font-size: 16pt;
+        margin-top: 20px;
+        border-bottom: 1px solid #999 !important;
+    }
+    
+    /* Ensure section breaks are clean */
+    section {
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Avoid breaking inside experience items */
+    .experience-item, .project-item, .education-item, .cert-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Format skill tags for print */
+    .skills {
+        break-before: avoid;
+        break-after: avoid;
+        break-inside: avoid;
+    }
+    
+    .skill-tag {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #999;
+        padding: 3px 10px !important;
+    }
+    
+    /* Remove background colors and use borders instead */
+    .overview, .cert-item, .defense-tech-section {
+        background-color: white !important;
+        border: 1px solid #ccc !important;
+        padding: 10px !important;
+    }
+    
+    /* Remove colored left borders and replace with simple borders */
+    .cert-item, .defense-tech-section {
+        border-left: 1px solid #999 !important;
+    }
+    
+    /* Hide QR code section when printing */
+    .qr-section {
+        display: none !important;
+    }
+    
+    /* Improve links for print */
+    a {
+        text-decoration: none;
+        color: black !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    /* Hide footer on print */
+    footer {
+        display: none !important;
+    }
+    
+    /* Adjust contact info for print */
+    .contact-info p {
+        margin: 2px 0 !important;
+    }
+    
+    /* Adjust list spacing */
+    ul {
+        margin-top: 5px !important;
+        padding-left: 15px !important;
+    }
+    
+    li {
+        margin-bottom: 3px !important;
+    }
+    
+    /* Minimize margins between sections for compact printing */
+    .experience-header, .project-header {
+        margin-bottom: 5px !important;
+    }
+    
+    /* Reduce spacing for dates */
+    .experience-date, .project-date {
+        font-size: 10pt !important;
+    }
+    
+    /* Improve experience company/institution text */
+    .experience-company, .project-type {
+        font-style: italic !important;
+        color: #333 !important;
+    }
+}
+        </style>
     </div>
 </body>
 </html>
