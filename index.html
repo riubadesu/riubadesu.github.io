@@ -1,69 +1,4 @@
-.pdf-content {
-            font-size: 10px;
-        }
-        
-        @media print {
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            
-            .container {
-                width: 100%;
-                max-width: none;
-                padding: 10px;
-                box-shadow: none;
-            }
-            
-            .download-section {
-                display: none;
-            }
-        }    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-        function generatePDF() {
-            // Show a loading message
-            const downloadBtn = document.querySelector('.download-button');
-            const originalText = downloadBtn.textContent;
-            downloadBtn.textContent = "Generating PDF...";
-            
-            // Create specific PDF content
-            const pdfContent = document.createElement('div');
-            pdfContent.className = 'pdf-container';
-            pdfContent.innerHTML = document.querySelector('.container').innerHTML;
-            
-            // Temporarily add to document with specific styling for PDF
-            pdfContent.style.position = 'absolute';
-            pdfContent.style.left = '-9999px';
-            pdfContent.style.width = '794px'; // A4 width
-            document.body.appendChild(pdfContent);
-            
-            // Use html2canvas and jsPDF
-            html2canvas(pdfContent, {
-                scale: 1,
-                useCORS: true,
-                logging: false,
-                allowTaint: true
-            }).then(canvas => {
-                // Remove the temporary element
-                document.body.removeChild(pdfContent);
-                
-                // Create PDF
-                const { jsPDF } = window.jspdf;
-                const pdf = new jsPDF('p', 'pt', 'a4');
-                
-                const imgData = canvas.toDataURL('image/png');
-                const imgWidth = 595; // A4 width in pts
-                const imgHeight = canvas.height * imgWidth / canvas.width;
-                
-                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-                pdf.save('Liubov_Marchuk_CV.pdf');
-                
-                // Restore button text
-                downloadBtn.textContent = originalText;
-            });
-        }
-    </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -255,34 +190,6 @@
             .experience-header, .project-header {
                 flex-direction: column;
             }
-        }
-        
-        .download-section {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        
-        .download-button {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .download-button:hover {
-            background-color: var(--primary-color);
-        }
-        
-        .download-button::before {
-            content: "📄";
-            font-size: 1.2em;
         }
 
         .qr-section {
@@ -497,12 +404,6 @@
         </section>
         
 
-        
-        <section>
-            <div class="download-section">
-                <a href="javascript:void(0);" onclick="generatePDF()" class="download-button">Download PDF CV</a>
-            </div>
-        </section>
         
         <footer>
             <p>© 2025 Liubov Marchuk | Last Updated: February 2025</p>
