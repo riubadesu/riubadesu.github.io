@@ -1,26 +1,66 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+.pdf-content {
+            font-size: 10px;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: none;
+                padding: 10px;
+                box-shadow: none;
+            }
+            
+            .download-section {
+                display: none;
+            }
+        }    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
         function generatePDF() {
-            // Element to convert to PDF
-            const element = document.querySelector('.container');
-            
-            // Hide the download button before generating PDF
+            // Show a loading message
             const downloadBtn = document.querySelector('.download-button');
-            downloadBtn.style.display = 'none';
+            const originalText = downloadBtn.textContent;
+            downloadBtn.textContent = "Generating PDF...";
             
-            // Options for the PDF
-            const options = {
-                margin: 10,
-                filename: 'Liubov_Marchuk_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+            // Create specific PDF content
+            const pdfContent = document.createElement('div');
+            pdfContent.className = 'pdf-container';
+            pdfContent.innerHTML = document.querySelector('.container').innerHTML;
             
-            // Generate PDF
-            html2pdf().from(element).set(options).save().then(() => {
-                // Show the download button again after PDF generation
-                downloadBtn.style.display = 'inline-flex';
+            // Temporarily add to document with specific styling for PDF
+            pdfContent.style.position = 'absolute';
+            pdfContent.style.left = '-9999px';
+            pdfContent.style.width = '794px'; // A4 width
+            document.body.appendChild(pdfContent);
+            
+            // Use html2canvas and jsPDF
+            html2canvas(pdfContent, {
+                scale: 1,
+                useCORS: true,
+                logging: false,
+                allowTaint: true
+            }).then(canvas => {
+                // Remove the temporary element
+                document.body.removeChild(pdfContent);
+                
+                // Create PDF
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF('p', 'pt', 'a4');
+                
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = 595; // A4 width in pts
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                
+                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+                pdf.save('Liubov_Marchuk_CV.pdf');
+                
+                // Restore button text
+                downloadBtn.textContent = originalText;
             });
         }
     </script><!DOCTYPE html>
