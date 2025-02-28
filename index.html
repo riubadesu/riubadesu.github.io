@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+            // Element to convert to PDF
+            const element = document.querySelector('.container');
+            
+            // Hide the download button before generating PDF
+            const downloadBtn = document.querySelector('.download-button');
+            downloadBtn.style.display = 'none';
+            
+            // Options for the PDF
+            const options = {
+                margin: 10,
+                filename: 'Liubov_Marchuk_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            // Generate PDF
+            html2pdf().from(element).set(options).save().then(() => {
+                // Show the download button again after PDF generation
+                downloadBtn.style.display = 'inline-flex';
+            });
+        }
+    </script><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -190,6 +215,34 @@
             .experience-header, .project-header {
                 flex-direction: column;
             }
+        }
+        
+        .download-section {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .download-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .download-button::before {
+            content: "📄";
+            font-size: 1.2em;
         }
 
         .qr-section {
@@ -404,6 +457,12 @@
         </section>
         
 
+        
+        <section>
+            <div class="download-section">
+                <a href="javascript:void(0);" onclick="generatePDF()" class="download-button">Download PDF CV</a>
+            </div>
+        </section>
         
         <footer>
             <p>© 2025 Liubov Marchuk | Last Updated: February 2025</p>
